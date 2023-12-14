@@ -15,6 +15,7 @@ services:
       DATABASE_CHARSET: 'utf8'
 
   postgres:
+    container_name: postgres
     image: postgres:14
     environment:
       POSTGRES_USER: dbuser
