@@ -26,6 +26,7 @@ services:
       - pg-database:/var/lib/postgresql/data
     networks:
       - backend
+      - default
     healthcheck:
       test: pg_isready -U dbuser
       interval: 3s

@@ -3,6 +3,10 @@ version: "3"
 networks:
   backend:
     driver: bridge
+  default:
+    name: ec-cude-default
+    external: true
+      
 
 volumes:
   mailcatcher-data:
@@ -57,6 +61,7 @@ services:
       # ECCUBE_ADMIN_PASS: "password"
     networks:
       - backend
+      - default
 
   ### Mailcatcher ##################################
   mailcatcher:
@@ -66,3 +71,4 @@ services:
       - "1025:1025"
     networks:
       - backend
+      - default
