@@ -24,6 +24,7 @@ services:
       - pg-database:/var/lib/postgresql/data
       - ./config/postgresql.conf:/etc/postgresql/postgresql.conf
       - ./config/postgresql.conf:/var/lib/postgresql/data/postgresql.conf
+      - /tmp/pg_log:/var/lib/postgresql/data/pg_log:rw
     networks:
       - backend
       - default
