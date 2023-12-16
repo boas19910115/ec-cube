@@ -23,6 +23,7 @@ services:
     volumes:
       - pg-database:/var/lib/postgresql/data
       - ./config/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./config/postgresql.conf:/var/lib/postgresql/data/postgresql.conf
     networks:
       - backend
       - default
