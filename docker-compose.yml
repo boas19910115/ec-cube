@@ -3,8 +3,8 @@ version: "3"
 networks:
   backend:
     driver: bridge
-  default:
-    name: ec-cube-default
+  default-shared:
+    name: ec-cube-default-shared
     external: true
       
 
@@ -61,7 +61,7 @@ services:
       # ECCUBE_ADMIN_PASS: "password"
     networks:
       - backend
-      - default
+      - default-shared
 
   ### Mailcatcher ##################################
   mailcatcher:
@@ -71,4 +71,4 @@ services:
       - "1025:1025"
     networks:
       - backend
-      - default
+      - default-shared

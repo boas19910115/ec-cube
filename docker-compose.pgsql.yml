@@ -27,7 +27,7 @@ services:
       - /tmp/pg_log:/var/lib/postgresql/data/pg_log:rw
     networks:
       - backend
-      - default
+      - default-shared
     healthcheck:
       test: pg_isready -U dbuser
       interval: 3s
