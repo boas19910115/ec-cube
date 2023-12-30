@@ -20,8 +20,9 @@ services:
     environment:
       POSTGRES_USER: dbuser
       POSTGRES_PASSWORD: secret
+      PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - pg-database:/var/lib/postgresql/data
+      - pg-database:/var/lib/postgresql/data/pgdata
       - ./config/postgresql.conf:/etc/postgresql/postgresql.conf
       - ./config/postgresql.conf:/var/lib/postgresql/data/postgresql.conf
       - /tmp/pg_log:/var/lib/postgresql/data/pg_log:rw
