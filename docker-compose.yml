@@ -4,7 +4,7 @@ networks:
   backend:
     driver: bridge
   default:
-    name: ec-cude-default
+    name: ec-cube-default
     external: true
       
 
